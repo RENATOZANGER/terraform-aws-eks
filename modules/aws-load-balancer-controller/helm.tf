@@ -4,6 +4,11 @@ resource "helm_release" "eks_helm_controller" {
   chart      = "aws-load-balancer-controller"
   namespace  = "kube-system"
   #version = "1.4.4"
+  depends_on = [
+    var.kubernetes_deployment_id,
+    var.kubernetes_ingress_v1_id,
+    var.kubernetes_service_id,
+  ]
 
   set {
     name  = "vpcId"
