@@ -6,6 +6,12 @@ resource "aws_internet_gateway" "eks_igw" {
       Name = "${var.project_name}-igw"
     }
   )
+  depends_on = [
+    aws_nat_gateway.eks_ngw_1a,
+    aws_nat_gateway.eks_ngw_1b,
+    aws_eip.eks_ngw_eip_1a,
+    aws_eip.eks_ngw_eip_1b,
+  ]
 }
 
 resource "aws_route_table" "eks_public_route_table" {
