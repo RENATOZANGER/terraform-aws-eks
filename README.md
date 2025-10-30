@@ -39,7 +39,7 @@ module "eks_cluster" {
 }
 ```
 
-### 1. Backend S3
+### Backend S3
 
 Este projeto utiliza um backend S3 para armazenar o estado do Terraform. 
 
