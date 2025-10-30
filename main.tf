@@ -28,9 +28,6 @@ module "eks_load_balancer_controller" {
   oidc                     = module.eks_cluster.oidc
   cluster_name             = module.eks_cluster.cluster_name
   vpc_id                   = module.eks_network.vpc_id
-  kubernetes_ingress_v1_id = module.k8s_app.kubernetes_ingress_v1_id
-  kubernetes_service_id    = module.k8s_app.kubernetes_service_id
-  kubernetes_deployment_id = module.k8s_app.kubernetes_deployment_id
   tags                     = var.tags
 }
 

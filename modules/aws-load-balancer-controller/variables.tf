@@ -22,18 +22,3 @@ variable "vpc_id" {
   type        = string
   description = "The ID of the VPC where the EKS cluster is deployed"
 }
-
-variable "kubernetes_ingress_v1_id" {
-  type        = string
-  description = "The ID of the Kubernetes Ingress resource"
-}
-
-variable "kubernetes_deployment_id" {
-  type        = string
-  description = "The ID of the Kubernetes Deployment resource"
-}
-
-variable "kubernetes_service_id" {
-  type        = string
-  description = "The ID of the Kubernetes Service resource"
-}
