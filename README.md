@@ -143,5 +143,9 @@ O DNS do Load Balancer será listado na coluna `ADDRESS`. Acesse esse endereço 
 
 ## 🧹 Limpeza da Infraestrutura
 ```bash
+kubectl delete ingress meu-app-ingress
+kubectl delete service meu-app-service
+kubectl delete deployment meu-app
+
 terraform destroy -auto-approve
 ```
